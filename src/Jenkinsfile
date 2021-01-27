@@ -14,13 +14,5 @@ pipeline {
         }
       }
     }
-    stage ('BUILD'){
-            when { 
-        expression { 
-            branch 'develop'
-        }
-    }
-
-    }
   }
 }
