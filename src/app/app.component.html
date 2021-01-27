@@ -1,23 +1,24 @@
-<h1>Location Details!</h1>
-<div class="main">
-  <h3>select area to view details</h3>
-  <div>
-    <select class="selection" [ngModel]="selectedLocation" (ngModelChange)="onChangeObj($event)">
-      <option [ngValue]="i" *ngFor="let i of locationDetails">{{i.name}}</option>
-    </select>
-  </div>
+<div class="outerBody">
+  <h1>Location Details!</h1>
+  <div class="main">
+    <h3>select area to view details</h3>
+    <div>
+      <select class="selection" [ngModel]="selectedLocation" (ngModelChange)="onChangeObj($event)">
+        <option [ngValue]="i" *ngFor="let i of locationDetails">{{i.name}}</option>
+      </select>
+    </div>
 
-  <div *ngIf="mySelection">
-    <p>The selected area is: {{selectedLocation.name}}</p>
-    <p>The population in {{selectedLocation.name}} is : {{selectedLocation.population.total}}</p>
-    <ul>
-      <li>Total Number of men population is : {{selectedLocation.population.men}}</li>
-      <li>Total Number of women population is : {{selectedLocation.population.women}}</li>
-    </ul>
+    <div *ngIf="mySelection">
+      <p>The selected area is: {{selectedLocation.name}}</p>
+      <p>The population in {{selectedLocation.name}} is : {{selectedLocation.population.total}}</p>
+      <ul>
+        <li>Total Number of men population is : {{selectedLocation.population.men}}</li>
+        <li>Total Number of women population is : {{selectedLocation.population.women}}</li>
+      </ul>
 
-    <p>The literacy rate in {{selectedLocation.name}} is : {{selectedLocation.literacy}}</p>
+      <p>The literacy rate in {{selectedLocation.name}} is : {{selectedLocation.literacy}}</p>
+    </div>
   </div>
 </div>
-
 
 <router-outlet></router-outlet>
