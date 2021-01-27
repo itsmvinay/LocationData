@@ -1,3 +1,6 @@
+.outerBody{
+  background-color: bisque;
+}
 .main {
   position: absolute;
   top: 40%;
