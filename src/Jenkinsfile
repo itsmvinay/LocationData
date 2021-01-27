@@ -14,7 +14,7 @@ pipeline {
         }
       }
     }
-    stage ('Build'){
+    stage ('BUILD'){
             when { 
         expression { 
             branch 'develop'
